@@ -1,10 +1,9 @@
-import updateUserRegCodeModel from "../../models/users/updateRecoverPassModel.js";
+import updateUserRegCodeModel from "../../models/users/updateUserRegCodeModel.js";
 
 const validateUserController = async (req, res, next) => {
   try {
     const { registrationCode } = req.params;
 
-    // Activamos el usuario.
     const user = await updateUserRegCodeModel(registrationCode);
     console.log(user);
     res.send({

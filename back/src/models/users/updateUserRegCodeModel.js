@@ -1,6 +1,6 @@
 import getPool from "../../db/getPool.js";
 
-import { notFoundError } from "../services/errorService.js";
+import { notFoundError } from "../../services/errorService.js";
 
 const updateUserRegCodeModel = async (registrationCode) => {
   const pool = await getPool();
