@@ -27,23 +27,16 @@ const main = async () => {
                 modifiedAt DATETIME ON UPDATE CURRENT_TIMESTAMP
                 )	
         `);
-    await pool.query(`
-            CREATE TABLE IF NOT EXISTS topics (
-                id CHAR(36) PRIMARY KEY NOT NULL,
-                name ENUM('deportes','viajes','economia')
-                )
-        `);
 
     await pool.query(`
             CREATE TABLE IF NOT EXISTS comments (
                 id CHAR(36) PRIMARY KEY NOT NULL,
                 title VARCHAR(50) NOT NULL,
-                topicsID CHAR(36) NOT NULL,
+                topic ENUM('deportes','viajes','economia', 'comidas') NOT NULL,
                 description TEXT NOT NULL,
                 userId CHAR(36) NOT NULL,
                 createdAt DATETIME DEFAULT CURRENT_TIMESTAMP, 
-                FOREIGN KEY (userId) REFERENCES users(id),
-                FOREIGN KEY (topicsId) REFERENCES topics(id)
+                FOREIGN KEY (userId) REFERENCES users(id)
                 )
         `);
 
@@ -58,7 +51,7 @@ const main = async () => {
         `);
 
     await pool.query(`
-            CREATE TABLE IF NOT EXISTS positivesVotes (
+            CREATE TABLE IF NOT EXISTS positiveVotes (
                 id CHAR(36) PRIMARY KEY NOT NULL,
                 value TINYINT UNSIGNED NOT NULL,
                 userId CHAR(36) NOT NULL,

@@ -8,13 +8,13 @@ import editUserProfilePhotoSchema from "../../schemas/users/editUserProfilePhoto
 
 const userProfilePhotoController = async (req, res, next) => {
   try {
-    if (!req.files || !req.files.avatar) {
+    if (!req.files || !req.files.profilePhoto) {
       return res
         .status(400)
         .send({ message: "No se encontro el archivo / File not found" });
     }
 
-    const profilePhotoFile = req.files.avatar;
+    const profilePhotoFile = req.files.profilePhoto;
 
     const fileDataForValidation = {
       name: profilePhotoFile.name,
@@ -23,7 +23,7 @@ const userProfilePhotoController = async (req, res, next) => {
     };
 
     await validateSchemaUtil(editUserProfilePhotoSchema, {
-      avatar: fileDataForValidation,
+      profilePhoto: fileDataForValidation,
     });
 
     const profilePhotoFileName = await savePhotoService(profilePhotoFile, 100);

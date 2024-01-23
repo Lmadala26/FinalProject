@@ -97,7 +97,7 @@ export const photoLimitReachedError = () => {
   };
 };
 
-export const cannotVoteOwnEntryError = () => {
+export const cannotVoteOwnCommentError = () => {
   throw {
     httpStatus: 403,
     code: "CANNOT_VOTE_OWN_ENTRY",

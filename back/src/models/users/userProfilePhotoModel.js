@@ -1,10 +1,10 @@
 import getPool from "../../db/getPool.js";
 
-const userProfilePhotoModel = async (avatarName, userId) => {
+const userProfilePhotoModel = async (profilePhotoName, userId) => {
   const pool = await getPool();
 
-  await pool.query(`UPDATE users SET avatar = ? WHERE id = ?`, [
-    avatarName,
+  await pool.query(`UPDATE users SET profilePhoto = ? WHERE id = ?`, [
+    profilePhotoName,
     userId,
   ]);
 };
