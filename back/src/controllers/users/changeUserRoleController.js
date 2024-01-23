@@ -10,7 +10,6 @@ const changeUserRoleController = async (req, res, next) => {
       superuserError();
     }
 
-    // Actualizar el rol del usuario en la base de datos
     await updateUserRoleModel(userId, newRole);
 
     res.send({

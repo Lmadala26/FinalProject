@@ -39,7 +39,7 @@ router.post("/users/password/recover", recoverPassController);
 router.put("/users/password", editUserPassController);
 
 router.put(
-  "/users/avatar",
+  "/users/profilephoto",
   authUserController,
   userExistsController,
   userProfilePhotoController
