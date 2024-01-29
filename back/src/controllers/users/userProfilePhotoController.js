@@ -1,9 +1,6 @@
 import userProfilePhotoModel from "../../models/users/userProfilePhotoModel.js";
-
 import { savePhotoService } from "../../services/photoService.js";
-
 import validateSchemaUtil from "../../utils/validateSchemaUtil.js";
-
 import editUserProfilePhotoSchema from "../../schemas/users/editUserProfilePhotoSchema.js";
 
 const userProfilePhotoController = async (req, res, next) => {

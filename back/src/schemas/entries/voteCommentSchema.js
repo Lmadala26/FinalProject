@@ -5,8 +5,8 @@ const voteCommentSchema = joi.object({
   value: joi
     .number()
     .integer()
-    .min(1)
-    .max(5)
+    //.min(1)
+    .max(1)
     .required()
     .messages(joiErrorMessages),
 });
