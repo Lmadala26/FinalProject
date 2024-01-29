@@ -3,8 +3,10 @@ import listCommentsController from "./listCommentsController.js";
 import getCommentController from "./getCommentController.js";
 import addCommentPhotoController from "./addCommentPhotoController.js";
 import deleteCommentPhotoController from "./deleteCommentPhotoController.js";
-import positiveVoteCommentController from "./positiveVoteCommentController.js";
-import negativeVoteCommentController from "./negativeVoteCommentController.js";
+import {
+  positiveVoteCommentController,
+  negativeVoteCommentController,
+} from "./voteCommentController.js";
 
 export {
   newCommentController,

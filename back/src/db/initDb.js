@@ -7,7 +7,7 @@ const main = async () => {
     pool = await getPool();
 
     await pool.query(
-      "DROP TABLE IF EXISTS users, topics, comments, commentsPhotos, positivesVotes, negativeVotes "
+      "DROP TABLE IF EXISTS users, comments, commentsPhotos, positiveVotes, negativeVotes "
     );
 
     console.log("Creando base de datos");
@@ -19,6 +19,7 @@ const main = async () => {
                 username VARCHAR(30) UNIQUE NOT NULL,
                 password VARCHAR(100) NOT NULL,
                 profilePhoto VARCHAR(100),
+                backgroundImg VARCHAR(100),
                 active BOOLEAN DEFAULT false,
                 role ENUM('superuser', 'user') DEFAULT 'user',
                 registrationCode CHAR(30),
@@ -31,8 +32,8 @@ const main = async () => {
     await pool.query(`
             CREATE TABLE IF NOT EXISTS comments (
                 id CHAR(36) PRIMARY KEY NOT NULL,
-                title VARCHAR(50) NOT NULL,
-                topic ENUM('deportes','viajes','economia', 'comidas') NOT NULL,
+                title VARCHAR(40) NOT NULL,
+                topic ENUM('deportes','viajes','economia', 'comidas', 'musica', 'tecnologia' ) NOT NULL,
                 description TEXT NOT NULL,
                 userId CHAR(36) NOT NULL,
                 createdAt DATETIME DEFAULT CURRENT_TIMESTAMP, 
