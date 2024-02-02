@@ -1,0 +1,22 @@
+.daderror {
+    display: grid;
+    /* Centra el contenido verticalmente en la fila */
+    place-content: center; 
+    overflow: hidden;
+}
+
+
+.error {
+    /* display: grid;
+    place-content: center;  */
+    overflow: hidden;
+    height: 80rem;
+    width: 80rem;
+    transform: translateY(10%);
+    background-image: url('../../assets/error404C.svg');
+    background-size:auto;
+    background-repeat: no-repeat;
+}
+
+
+

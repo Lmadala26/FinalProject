@@ -1,0 +1,20 @@
+@import "./normalize.css";
+
+* {
+    cursor: url('../assets/cursorE.svg'), auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body {
+    display: grid;
+    min-height: 100vh;
+    background-image: url('../assets/fondoB.png');  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
