@@ -1,0 +1,11 @@
+.header {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    top: 0;
+    color: aliceblue;
+    background-color: rgba(73, 88, 153, 0.377);
+}
