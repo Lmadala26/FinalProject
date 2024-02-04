@@ -4,5 +4,9 @@
     flex-direction: column;
     align-items: center; /* Centra el contenido en el eje transversal (vertical) */
     justify-content: center; /* Centra el contenido en el eje principal (horizontal) */
-    padding: 20px; /* Espaciado interno del contenido principal */
+    /* padding: 20px; Espaciado interno del contenido principal */
+    padding-top: 0%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 0%;
 }
