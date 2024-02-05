@@ -1,6 +1,7 @@
 //probando un nuevo controlador para votos + funcion util
 import selectCommentByIdModel from "../../models/entries/selectCommentByIdModel.js";
-import insertVoteModel from "../../models/entries/insertVoteModel.js";
+import insertPositiveVoteModel from "../../models/entries/insertVoteModel.js";
+import insertNegativeVoteModel from "../../models/entries/insertNegativeVoteModel.js";
 import validateSchemaUtil from "../../utils/validateSchemaUtil.js";
 import hasUserVoted from "../../utils/voteUtil.js";
 import VoteCommentSchema from "../../schemas/entries/voteCommentSchema.js";
@@ -9,8 +10,10 @@ import {
   voteAlreadyExistsError,
 } from "../../services/errorService.js";
 
-const voteCommentController = async (req, res, next) => {
+const voteCommentController = async (req, res, next, PoNvote) => {
   try {
+    console.log(PoNvote);
+
     const { commentsId } = req.params;
     const { value } = req.body;
 
@@ -22,13 +25,15 @@ const voteCommentController = async (req, res, next) => {
       cannotVoteOwnCommentError();
     }
 
-    const hasVoted = await hasUserVoted(commentsId, req.user.id);
+    const hasVoted = await hasUserVoted(commentsId, req.user.id, PoNvote);
 
     if (hasVoted) {
       voteAlreadyExistsError();
     }
 
-    const votesAvg = await insertVoteModel(value, commentsId, req.user.id);
+    const votesAvg = PoNvote
+      ? await insertPositiveVoteModel(value, commentsId, req.user.id)
+      : await insertNegativeVoteModel(value, commentsId, req.user.id);
 
     res.send({
       status: "ok",
@@ -49,4 +54,4 @@ const negativeVoteCommentController = async (req, res, next) => {
   await voteCommentController(req, res, next, false);
 };
 
-export default voteCommentController;
+export { positiveVoteCommentController, negativeVoteCommentController };
