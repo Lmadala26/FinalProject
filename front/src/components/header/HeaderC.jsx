@@ -1,26 +1,25 @@
-
-import './header.module.css';
-
-export function Header (){
+import styles from './header.module.css';
+import logo from '../../assets/logos/logoTellit.png'
+export function Header(){
     return(
     <>
-        <header className="Header">
+        <header className={styles.Header}>
 
-            <div className="header__left">
+            <div className={styles.header__left}>
                 <img className="Logo"
-                    src="https://unavatar.io/Disney" alt=""/>
+                    src={logo} alt=""/>
             </div>
 
-            <div className="header__center">
-               <div className="search-header">
-                  <input placeholder="Search" className="search-header__input" type="text" />
-                  <button className="search-header__button">
+            <div className={styles.header__center}>
+               <div className={styles.search_header}>
+                  <input placeholder="Search" className={styles.search_header__input} type="text" />
+                  <button className={styles.search_header__button}>
                     <svg
                       fill="none"
                       viewBox="0 0 18 18"
                       height="18"
                       width="18"
-                      className="search-header__icon"
+                      className={styles.search_header__icon}
                     >
                       <path
                         fill="#3A3A3A"
@@ -31,7 +30,7 @@ export function Header (){
                 </div>
             </div>
 
-            <div className="header__right">
+            <div className={styles.header__right}>
                 <button>Sign up</button>
                 <button>Log in</button>
             </div>
