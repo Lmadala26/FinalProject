@@ -6,7 +6,7 @@ export function TopComments({userName, commentDate, commentTitle }) {
     return(
         
         <article className={styles.c__container}>
-                        <div className={styles.c__title}>
+                                    <div className={styles.c__title}>
                             <p>{commentTitle}</p>
                         </div>
                     

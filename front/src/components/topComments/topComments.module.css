@@ -57,11 +57,14 @@
 /*///////////////////////////////////////////////////////////////////*/
 .c__title {
     /*border: 1px solid rgb(252, 8, 171);*/
-    text-align: center;
-    width: max-content;
-    background-color: aquamarine;
-    padding: 1%;
-    border-radius: 30px;
+        width: max-content;
+        background-color: aquamarine;
+        padding: 1%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        border-radius: 30px;
+
     /*font-size: clamp(1rem, 0.0774rem + 1.7936vw, 2.625rem);*/
 
 }
