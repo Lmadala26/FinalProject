@@ -1,16 +1,27 @@
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../../assets/fonts/Poppins-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
 
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../../assets/fonts/Poppins-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
 
 
 .c__container{
     display: flex;
     flex-direction: row;
     width: 95%;
-    height: 30%;
-    border: 1px solid ;
+    border:1px ;
     padding: 1%;
     margin-top: 4%;
     margin-left: 2%;
-    background-color: rgb(136, 121, 121);
+    background-color: rgba(15, 15, 33, 0.80);
     border-radius: 30px;
     position:relative;
 }
@@ -28,10 +39,11 @@
 }
 .user__img{
     
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     padding: 5px;
     border-radius: 40px;
+    transform: translateY(-20%) translateX(-20%);
 }
 /*///////////////////////////////////////////////////////////////////*/
 
@@ -44,6 +56,7 @@
     flex-direction: column;
     position:relative;
     justify-content: space-between;
+    color: aliceblue;
     
 
 }
@@ -54,7 +67,11 @@
     /*border: 1px solid rgb(252, 8, 171);*/
     text-align: center;
     width: max-content;
-    background-color: aquamarine;
+    background-color: rgba(128, 128, 128, 0.267);
+    backdrop-filter: blur(10px);
+    color: aliceblue;
+    font-family: 'Poppins-Regular';
+    font-size: 85%;
     padding: 1%;
     position: absolute;
     left: 50%;
@@ -86,16 +103,17 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 1%;
     align-items: center;
     justify-content: right;
     position: relative;
+    transform: translateY(70%) translateX(3%);
 }
 
 .positive__button{
     padding: 0%;
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
     border-radius: 40px;
     display: flex;
     justify-content: center;
@@ -110,8 +128,8 @@
     border-radius: 40px;
 }
 .negative__button{
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
     padding: 5px;
     border-radius: 40px;
     position: relative;
