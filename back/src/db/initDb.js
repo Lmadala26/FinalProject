@@ -52,21 +52,9 @@ const main = async () => {
         `);
 
     await pool.query(`
-            CREATE TABLE IF NOT EXISTS positiveVotes (
+            CREATE TABLE IF NOT EXISTS votes (
                 id CHAR(36) PRIMARY KEY NOT NULL,
-                value TINYINT UNSIGNED NOT NULL,
-                userId CHAR(36) NOT NULL,
-                commentsId CHAR(36) NOT NULL,
-                createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
-                FOREIGN KEY (userId) REFERENCES users(id),
-                FOREIGN KEY (commentsId) REFERENCES comments(id)
-            )
-        `);
-
-    await pool.query(`
-            CREATE TABLE IF NOT EXISTS negativeVotes (
-                id CHAR(36) PRIMARY KEY NOT NULL,
-                value TINYINT UNSIGNED NOT NULL,
+                value BOOLEAN NOT NULL,
                 userId CHAR(36) NOT NULL,
                 commentsId CHAR(36) NOT NULL,
                 createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,

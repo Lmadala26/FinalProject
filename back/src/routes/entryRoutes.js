@@ -8,8 +8,7 @@ import {
   getCommentController,
   addCommentPhotoController,
   deleteCommentPhotoController,
-  positiveVoteCommentController,
-  negativeVoteCommentController,
+  voteCommentController,
 } from "../controllers/entries/index.js";
 
 import {
@@ -55,19 +54,11 @@ router.delete(
 );
 
 router.post(
-  "/comments/:commentsId/positivevotes",
+  "/comments/:commentsId/votes",
   authUserController,
   userExistsController,
   commentExistsController,
-  positiveVoteCommentController
-);
-
-router.post(
-  "/comments/:commentsId/negativevotes",
-  authUserController,
-  userExistsController,
-  commentExistsController,
-  negativeVoteCommentController
+  voteCommentController
 );
 
 export default router;

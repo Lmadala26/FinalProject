@@ -1,12 +1,10 @@
 import getPool from "../db/getPool.js";
 
-const hasUserVoted = async (commentsId, userId, PoNvote) => {
+const hasUserVoted = async (commentsId, userId) => {
   const pool = await getPool();
 
-  const tableName = PoNvote ? "positiveVotes" : "negativeVotes";
-
   const [result] = await pool.query(
-    `SELECT COUNT(*) AS count FROM ${tableName} WHERE commentsId = ? AND userId = ?`,
+    `SELECT COUNT(*) AS count FROM votes WHERE commentsId = ? AND userId = ?`,
     [commentsId, userId]
   );
 
