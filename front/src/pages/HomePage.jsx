@@ -17,8 +17,11 @@ export const HomePage = () => {
                 <Topic/>
                 <ul className={styles.Top__comments}>
                     <h2>Top comments</h2>
+                    <div className={styles.Topic__list}>
                         <TopComments userName={"Disney"} commentDate={"02/05/2004"} commentTitle={"Hoy se cena"}/>
                         <TopComments userName={"Disney"} commentDate={"02/05/2004"} commentTitle={"Hoy se cena"}/>
+
+                    </div>
                 </ul>
             </article>
         </main>
