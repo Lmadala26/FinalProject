@@ -21,6 +21,9 @@
     
 }
 
+
+
+
 .Topic {
     display: flex;
     align-items: center;
@@ -42,9 +45,17 @@
     width: 100%;
     height: 10vh;
     margin: 2%;
-    border-radius: 25px;}
-.Topic2{
-    border: 1px solid #F09;
+    border-radius: 25px;
+}
+.Topic1:hover {
+    outline: none;
+    border-color:#7AE3EF;
+    box-shadow: 0 0 10px #7AE3EF;
+}
+
+
+    .Topic2{
+        border: 1px solid #F09;
     color: #F09;
     display: flex;
     align-items: center;
@@ -53,7 +64,14 @@
     width: 100%;
     height: 10vh;
     margin: 2%;
-    border-radius: 25px;}
+    border-radius: 25px;
+}
+.Topic2:hover {
+    outline: none;
+    border-color: #F09;
+    box-shadow: 0 0 10px #F09;
+}
+
 .Topic3{
     border: 1px solid #F9EE07;
     color: #F9EE07;
@@ -65,6 +83,12 @@
     height: 10vh;
     margin: 2%;
     border-radius: 25px;}
+.Topic3:hover {
+    outline: none;
+    border-color: #F9EE07;
+    box-shadow: 0 0 10px #F9EE07;
+}
+
 .Topic4{
     border: 1px solid #8BEC14;
     color: #8BEC14;
@@ -76,6 +100,12 @@
     height: 10vh;
     margin: 2%;
     border-radius: 25px;}
+.Topic4:hover {
+    outline: none;
+    border-color: #8BEC14;
+    box-shadow: 0 0 10px #8BEC14;
+}
+
 .Topic5{
     border: 1px solid #CD0636;
     color: #CD0636;
@@ -87,3 +117,9 @@
     height: 10vh;
     margin: 2%;
     border-radius: 25px;}
+
+.Topic5:hover {
+    outline: none;
+    border-color: #CD0636;
+    box-shadow: 0 0 10px #CD0636;
+}
