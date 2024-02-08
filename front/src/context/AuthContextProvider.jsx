@@ -1,8 +1,9 @@
 import { createContext, useState, useEffect } from "react";
 import loggedUserService from "../service/loggedUserService";
+
 export const AuthContext = createContext();
 
-export const AuthContextProvider = ({ children }) => {
+const AuthContextProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
 
   const [user, setUser] = useState(null);
@@ -35,3 +36,5 @@ export const AuthContextProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
+
+export default AuthContextProvider;

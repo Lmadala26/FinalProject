@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.formRegister {
+  display: flex;
+  width: 29.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.4375rem;
+  position: absolute;
+  left: 22rem;
+  bottom: 17.6875rem;
+}
+.username {
+  display: flex;
+  width: 29.5rem;
+  height: 3.8125rem;
+  padding: 1.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.625rem;
+  border: 1px solid #fff;
+  background: #0f0f21;
+  backdrop-filter: blur(10.949999809265137px);
+  color: #686565;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.email {
+  display: flex;
+  width: 29.5rem;
+  height: 3.8125rem;
+  padding: 1.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.625rem;
+  border: 1px solid #fff;
+  background: #0f0f21;
+  backdrop-filter: blur(10.949999809265137px);
+  color: #686565;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.password {
+  display: flex;
+  width: 29.5rem;
+  height: 3.8125rem;
+  padding: 1.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.625rem;
+  border: 1px solid #fff;
+  background: #0f0f21;
+  backdrop-filter: blur(10.949999809265137px);
+  color: #686565;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.confirmPassword {
+  display: flex;
+  width: 29.5rem;
+  height: 3.8125rem;
+  padding: 1.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.625rem;
+  border: 1px solid #fff;
+  background: #0f0f21;
+  backdrop-filter: blur(10.949999809265137px);
+  color: #686565;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.send {
+  display: flex;
+  width: 13.3125rem;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  position: absolute;
+  left: 30.0625rem;
+  bottom: 9.25rem;
+  border-radius: 0.625rem;
+  border: 1px solid #fff;
+}
+
+label {
+  flex: 1 0 0;
+  color: #686565;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

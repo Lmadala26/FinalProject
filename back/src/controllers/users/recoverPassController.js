@@ -1,8 +1,6 @@
 import randomstring from "randomstring";
-
 import selectUserByEmailModel from "../../models/users/selectUserByEmailModel.js";
 import updateRecoverPassModel from "../../models/users/updateRecoverPassModel.js";
-
 import { notFoundError } from "../../services/errorService.js";
 
 const recoverPassController = async (req, res, next) => {

@@ -1,7 +1,5 @@
 import updateUserPassModel from "../../models/users/updateRecoverPassModel.js";
-
 import validateSchemaUtil from "../../utils/validateSchemaUtil.js";
-
 import editUserPassSchema from "../../schemas/users/editUserPassSchema.js";
 
 const editUserPassController = async (req, res, next) => {

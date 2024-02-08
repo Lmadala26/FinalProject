@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import registerUserService from "../../service/registerUserService";
+import styles from "./formregister.module.css";
 
 const FormRegister = () => {
   const [username, setUsername] = useState("");
@@ -29,10 +30,11 @@ const FormRegister = () => {
   console.log(rta);
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.formRegister} onSubmit={handleSubmit}>
       <div>
         <label>Nombre de usuario</label>
         <input
+          className={styles.username}
           type="text"
           name="username"
           value={username}
@@ -43,6 +45,7 @@ const FormRegister = () => {
       <div>
         <label>Email</label>
         <input
+          className={styles.email}
           type="email"
           name="email"
           value={email}
@@ -53,6 +56,7 @@ const FormRegister = () => {
       <div>
         <label>Password</label>
         <input
+          className={styles.password}
           type="password"
           name="password"
           value={password}
@@ -63,6 +67,7 @@ const FormRegister = () => {
       <div>
         <label>Confirmar Password</label>
         <input
+          className={styles.confirmPassword}
           type="password"
           name="confirmPassword"
           value={confirmPassword}
@@ -71,7 +76,7 @@ const FormRegister = () => {
         />
       </div>
       <div>
-        <input type="submit" value="Enviar" />
+        <input className={styles.send} type="submit" value="Enviar" />
       </div>
       {rta.status == "ok" ? (
         <>
