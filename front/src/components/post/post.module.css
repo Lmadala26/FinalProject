@@ -1,0 +1,77 @@
+.content {
+    border: 1px solid aliceblue;
+    backdrop-filter: blur(3px);
+    border-radius: 30px;
+    background-color: #0f0f2154;
+    width: 95%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+}
+
+.comment {
+    border: 1px solid aliceblue;
+    border-radius: 30px;
+    color: rgb(182, 183, 184);
+    padding: 20px 20px;
+    width: 90%;
+    height: 30vh;
+    transform: translateY(20%);
+    background-color: rgba(13, 13, 158, 0.281);
+    text-decoration: none;
+}
+
+.post {
+    transform: translateY(200%) translateX(-4%);
+    width: 10vw;
+    border-radius: 20px;
+    padding: 9px;
+    background-color: rgba(13, 13, 158, 0.281);
+    border-color: aliceblue;
+    color: rgb(182, 183, 184);
+}
+
+#title {
+    transform: translateY(100%);
+    width: 25vw;
+    height: 4vh;
+    text-transform: translate(50%);
+    text-align: center;
+    background-color: rgba(13, 13, 158, 0.281);
+    border-color: aliceblue;
+    border-radius: 20px;
+    color: rgb(182, 183, 184);
+}
+
+#topics {
+    background-color: rgba(13, 13, 158, 0.281);
+    border-color: aliceblue;
+    border-radius: 20px;
+    color: rgb(182, 183, 184);
+    width: 20vw;
+    height: 5vh;
+    text-align: center;
+}
+
+.topic1 {
+    color: #7AE3EF;
+}
+
+.topic2 {
+    color: #FF0099;
+}
+
+.topic3 {
+    color: #F9EE07;
+}
+
+.topic4 {
+    color: #8BEC14;
+}
+
+.topic5 {
+    color: #CD0636;
+}

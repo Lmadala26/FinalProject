@@ -1,5 +1,12 @@
+import styles from './postComment.module.css'
+import {Post} from '../components/post/Post'
+import {postComment} from '../service/postComment'
 export const PostComment = () => {
     return (
-        <h1 style= {{color:'aquamarine'}}>PUBLICAR COMENTARIO</h1>
+      <>
+      <div className={styles.container}>
+        <Post/>
+      </div>
+      </>
     );
-  };
+};
