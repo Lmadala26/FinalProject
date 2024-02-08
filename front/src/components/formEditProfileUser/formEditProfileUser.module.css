@@ -1,0 +1,264 @@
+
+.formDad{
+    display: flex;
+    width: 104.625rem;
+    height: 31rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+    flex-shrink: 0;
+    background-color:rgba(15, 15, 33, 0.8);
+    border: 1px solid #ffffff;
+    border-radius: 0.625rem;    
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top:27rem;
+    justify-content: center;
+    /* bottom: -2.5625rem; */
+    /* backdrop-filter: blur(4px); */
+}
+
+.formDad:hover {
+    outline: none;
+    border-color:#ffffff;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+.formUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    /* position: absolute; */
+/* left: 5.5rem;
+
+top: 2.8125rem; */
+}
+
+/*............*/
+
+.divProfile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.labelProfile{
+font-family: 'Poppins-Bold';
+color: #ffffff;
+text-align: center;
+font-size: 2rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-decoration-line: underline;
+}
+
+.inputProfile{
+
+font-family: 'Poppins-Regular';
+color: #ffffff;
+text-align: center;
+font-size: 2rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+    display: flex;
+    font-size: x-large;
+padding: 1.75rem;
+justify-content: center;
+align-items: center;
+gap: 0.625rem;
+border-radius: 0.625rem;
+border: 1px solid #FFF;
+background: #0F0F21;
+backdrop-filter: blur(10.949999809265137px);
+}
+
+.inputName:hover {
+    outline: none;
+    border-color:#ffffff;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+.inputProfile:hover {
+    outline: none;
+    border-color:#ffffff;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+/*............*/
+
+.divParteInferior{
+    display: flex;
+align-items: flex-start;
+gap: 2.5625rem;
+}
+
+/*............*/
+
+
+.divBackground{
+    display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.625rem;
+}
+
+.labelBackground{
+text-align: center;
+font-size: 2rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+    font-family: 'Poppins-Bold';
+color: #ffffff;
+text-decoration-line: underline;
+}
+
+
+.inputBackground{
+    font-family: 'Poppins-Regular';
+    color: #ffffff;
+text-align: center;
+font-size: 2rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+    display: flex;
+    font-size: x-large;
+padding: 1.75rem;
+justify-content: center;
+align-items: center;
+gap: 0.625rem;
+border-radius: 0.625rem;
+border: 1px solid #FFF;
+background: #0F0F21;
+backdrop-filter: blur(10.949999809265137px);
+
+}
+.inputBackground:hover {
+    outline: none;
+    border-color:#ffffff;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+/*............*/
+
+.divName{
+    display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.625rem;
+}
+
+.labelName{
+    font-family: 'Poppins-Bold';
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+.inputName{
+    font-family: 'Poppins-Regular';
+    color: #ffffff;
+    text-align: center;
+font-size: 2rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+    display: flex;
+    font-size: x-large;
+padding: 1.75rem;
+justify-content: center;
+align-items: center;
+gap: 0.625rem;
+border-radius: 0.625rem;
+border: 1px solid #FFF;
+background: #0F0F21;
+backdrop-filter: blur(10.949999809265137px);
+}
+
+
+/*............*/
+
+.divEmail{
+    display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.625rem;
+}
+
+.labelEmail{
+    font-family: 'Poppins-Bold';
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+.inputEmail{
+    font-family: 'Poppins-Regular';
+    color: #ffffff;
+    text-align: center;
+font-size: 2rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+    display: flex;
+    font-size: x-large;
+padding: 1.75rem;
+justify-content: center;
+align-items: center;
+gap: 0.625rem;
+border-radius: 0.625rem;
+border: 1px solid #FFF;
+background: #0F0F21;
+backdrop-filter: blur(10.949999809265137px);
+}
+
+.inputEmail:hover {
+    outline: none;
+    border-color:#ffffff;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+/*............*/
+
+.button{
+    display: flex;
+width: 13.3125rem;
+padding: 0.625rem;
+justify-content: center;
+align-items: center;
+gap: 0.625rem;
+border-radius: 0.625rem;
+border: 1px solid #FFF;
+    font-family: 'Poppins-Bold';
+    color: #ffffff;
+    color: #FFF;
+text-align: center;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+background-color:rgba(15, 15, 33, 0.8);
+}
+
+.button:hover {
+    outline: none;
+    border-color:#ffffff;
+    box-shadow: 0 0 10px #ffffff;
+}

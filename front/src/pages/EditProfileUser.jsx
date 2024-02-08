@@ -1,5 +1,13 @@
+import { FormEditProfileUser } from "../components/formEditProfileUser/FormEditProfileUser";
+import { ProfileUserHero } from "../components/profileUserHero/ProfileUserHero";
+
 export const EditProfileUser = () => {
-    return (
-        <h1 style= {{color:'green'}}>EDITAR PERFIL DE UN USUARIO</h1>
+    return (    
+        <>
+            <main>  
+                <ProfileUserHero />
+                <FormEditProfileUser />
+            </main>
+        </>
     );
   };

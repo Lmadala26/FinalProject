@@ -1,0 +1,334 @@
+.h11{
+    visibility: hidden;
+    position: absolute;
+}
+
+/*............*/
+
+.sectionDad {
+    display: flex;
+    width:115.25rem;
+    height: 37.1875rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 8.4375rem;
+border-radius: 0.625rem;
+border: 1px solid #F9EE07;
+
+background: rgba(15, 15, 33, 0.80);
+
+backdrop-filter: blur(2px);
+margin-top: 3rem;
+position: fixed;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.sectionDad:hover {
+    outline: none;
+    border-color:#F9EE07;
+    box-shadow: 0 0 10px #F9EE07;
+}
+
+/*............*/
+
+.son1 {
+    display: flex;
+flex-direction: column;
+align-items: center;
+gap: 4.9375rem;
+position: absolute;
+left: 3rem;
+
+top: 1.1875rem;
+}
+
+.photoProfile {
+    width: 24.9375rem;
+height: 24.9375rem;
+border-radius: 12.46875rem;
+}
+
+.username {
+    display: flex;
+width: 22rem;
+height: 3.8125rem;
+padding: 1.75rem;
+justify-content: center;
+align-items: center;
+gap: 0.625rem;
+border-radius: 0.625rem;
+border: 1px solid #F9EE07;
+background: #0F0F21;
+backdrop-filter: blur(10.949999809265137px);
+color: #F9EE07;
+text-align: center;
+font-family: 'Sportrop';
+font-size: 2rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.username:hover {
+    outline: none;
+    border-color:#F9EE07;
+    box-shadow: 0 0 10px #F9EE07;
+}
+
+/*............*/
+
+
+.son2 {}
+
+.date{
+    font-family: 'Poppins-Regular';
+    display: flex;
+    align-items: center;
+    gap: 0.6875rem;
+    position: absolute;
+right: 2.1875rem;
+
+top: 2.4375rem;
+width: 9.3125rem;
+height: 2.75rem;
+color: #FFF;
+text-align: right;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+/*............*/
+
+
+.divTitle {
+    display: flex;
+align-items: center;
+gap: 0.6875rem;
+position: absolute;
+right: 40rem;
+top: 2.3125rem;
+width: auto;
+height: auto;
+color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.title {
+    display: flex;
+
+    width: auto;
+height: 2.75rem;
+color: #FFF;
+
+text-align: center;
+font-family: 'Poppins-Bold';
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.iconTitle {
+    display: flex;
+width: 2.5rem;
+height: auto;
+position: absolute;
+top: 0.6rem;
+left: 5rem;
+}
+
+/*............*/
+
+
+.divCommentDad {
+    display: flex;
+padding: 1.25rem;
+flex-direction: column;
+align-items: center;
+gap: 6.4375rem;
+position: absolute;
+right: 2.1875rem;
+bottom:2rem;
+border-radius: 0.625rem;
+border: 1px solid #F9EE07;
+/* width: 100rem; */
+}
+
+.divCommentDad:hover {
+    outline: none;
+    border-color:#F9EE07;
+    box-shadow: 0 0 10px #F9EE07;
+    
+}
+
+.divComment {
+    width: 80rem;
+height: 2rem;
+display: flex;
+align-items: center;
+gap: 0.625rem;
+transform: translateY(80%);
+}
+
+.comment {
+
+    font-family: 'Poppins-Regular';
+    color: #FFF;
+font-size: 1rem;
+font-style: normal;
+/* font-weight: auto; */
+line-height: normal;
+}
+
+/*............*/
+
+
+.divPhotos {
+    display: flex;
+align-items: flex-start;
+gap: 5rem;
+width: auto;
+height: auto;
+/* position: absolute;
+right: 2.1875rem;
+bottom:-60rem; */
+
+}
+
+
+
+.divPhotos1{
+    width: 18.0625rem;
+    height: 18.0625rem;
+border-radius: 0.625rem;
+
+}
+
+.divPhotos1:hover {
+    outline: none;
+    border-color:#F9EE07;
+    box-shadow: 0 0 10px #F9EE07;
+}
+
+.divPhotos2{
+    width: 18.0625rem;
+    height: 18.0625rem;
+border-radius: 0.625rem;
+
+}
+
+.divPhotos2:hover {
+    outline: none;
+    border-color:#F9EE07;
+    box-shadow: 0 0 10px #F9EE07;
+}
+
+
+.divPhotos3{
+    width: 18.0625rem;
+    height: 18.0625rem;
+border-radius: 0.625rem;
+
+}
+
+.divPhotos3:hover {
+    outline: none;
+    border-color:#F9EE07;
+    box-shadow: 0 0 10px #F9EE07;
+}
+
+
+.photo1 {
+    display: flex;
+align-items: flex-start;
+gap: 0.625rem;
+width: 100%;
+height: 100%;
+border-radius: 0.625rem;
+object-fit:cover;
+}
+
+.photo2 {
+    display: flex;
+align-items: flex-start;
+gap: 0.625rem;
+width: 100%;
+height: 100%;
+border-radius: 0.625rem;
+object-fit:cover;
+
+}
+
+.photo3 {
+    display: flex;
+align-items: flex-start;
+gap: 0.625rem;
+width: 100%;
+height: 100%;
+/* clip-path: inset(0 round 10px); */
+border-radius: 0.625rem;
+object-fit:cover;
+
+}
+
+/*............*/
+
+
+.son3 {
+
+    display: flex;
+align-items: flex-start;
+gap: 6.25rem;
+position: absolute;
+left: 46.3125rem;
+bottom: -10.42375rem;
+
+}
+
+.likeButton {
+    width: 7rem;
+height: 7rem;
+    display: flex;
+padding: 1.1875rem 1.4375rem;
+align-items: flex-start;
+gap: 0.625rem;
+
+    background-image: url('../../assets/icons/positiveVote.svg');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+
+}
+
+.likeButton:hover {
+    outline: none;
+    border-color:#F9EE07;
+    filter: drop-shadow( 0px 0px 10px #ffff);
+}
+
+.dislikeButton {
+    width: 7rem;
+height: 7rem;
+    display: flex;
+padding: 1.125rem 1.4375rem;
+align-items: flex-start;
+gap: 0.625rem;
+    background-image: url('../../assets/icons/negativeVote.svg');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+}
+
+.dislikeButton:hover {
+    outline: none;
+    border-color:#F9EE07;
+    filter: drop-shadow( 0px 0px 10px #ffff);
+}
