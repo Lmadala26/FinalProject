@@ -7,7 +7,7 @@ const main = async () => {
     pool = await getPool();
 
     await pool.query(
-      "DROP TABLE IF EXISTS users, comments, commentsPhotos, positiveVotes, negativeVotes "
+      "DROP TABLE IF EXISTS users, comments, commentsPhotos, votes "
     );
 
     console.log("Creando base de datos");

@@ -1,10 +1,15 @@
 import FormRegister from "../components/formRegister/FormRegister";
+import "./registerpage.css";
 
 export const RegisterPage = () => {
   return (
     <>
-      <h1 style={{ color: "orange" }}>Sing in</h1>
-      <FormRegister />
+      <div className="singUpFather">
+        <section className="singUpSection">
+          <h1 className="singUp"> Sing Up</h1>
+          <FormRegister />
+        </section>
+      </div>
     </>
   );
 };

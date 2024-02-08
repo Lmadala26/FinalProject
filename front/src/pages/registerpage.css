@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.singUpFather {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  position: center;
+}
+.singUpSection {
+  display: flex;
+  width: 73.5rem;
+  height: 53.75rem;
+  padding: 0.625rem;
+  justify-content: center;
+  gap: 0.625rem;
+  border-radius: 0.625rem;
+  border: 1px solid #fff;
+  background: rgba(15, 15, 33, 0.8);
+  backdrop-filter: blur(2px);
+}
+.singUp {
+  left: 19.0625rem;
+  color: #fff;
+  text-align: center;
+  font-family: Sportrop;
+  font-size: 8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+}
