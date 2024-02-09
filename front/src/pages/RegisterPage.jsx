@@ -1,13 +1,15 @@
 import FormRegister from "../components/formRegister/FormRegister";
-import "./registerpage.css";
+import styles from "./registerpage.module.css";
 
 export const RegisterPage = () => {
   return (
     <>
-      <div className="singUpFather">
-        <section className="singUpSection">
-          <h1 className="singUp"> Sing Up</h1>
+      <div className={styles.singUpFather}>
+        <section className={styles.singUpSection}>
+          <h1 className={styles.singUp}> Sing Up</h1>
+          <div className={styles.inputs}>
           <FormRegister />
+          </div>
         </section>
       </div>
     </>
