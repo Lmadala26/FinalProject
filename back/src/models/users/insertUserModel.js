@@ -32,7 +32,7 @@ const insertUserModel = async (username, email, password, registrationCode) => {
   const emailBody = `
   ¡Bienvenid@ / Welcome ${username}!
   Gracias por unirte a Tellit. Para habilitar tu cuenta, selecciona el enlace siguiente:
-  <a href="http://localhost:3000/users/validate/${registrationCode}">Activar tu cuenta / Activate your account </a>
+  <a href="http://localhost:5173/users/validate/${registrationCode}">Activar tu cuenta / Activate your account </a>
  `;
 
   await emailUtil(email, emailSubject, emailBody);

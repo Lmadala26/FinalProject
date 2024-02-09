@@ -24,7 +24,7 @@ const updateRecoverPassModel = async (email, recoverPassCode) => {
 
             You have requested password recovery. 
                 
-            Use the following code to create a new password: ${recoverPassCode}.
+            Use the following code to create a new password: ${recoverPassCode}
 
             If it was not you, please ignore this email.
         `;

@@ -41,13 +41,6 @@ router.post("/users/password/recover", recoverPassController);
 router.put("/users/password", editUserPassController);
 
 router.put(
-  "/users/:userId",
-  authUserController,
-  userExistsController,
-  editUserInfoController
-);
-
-router.put(
   "/users/profilephoto",
   authUserController,
   userExistsController,
@@ -62,5 +55,12 @@ router.put(
 );
 
 router.put("/users/:userId/role", authUserController, changeUserRoleController);
+
+router.put(
+  "/users/:userId",
+  authUserController,
+  userExistsController,
+  editUserInfoController
+);
 
 export default router;
