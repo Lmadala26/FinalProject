@@ -1,0 +1,44 @@
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
+const ActivateUser = () => {
+  const { registrationCode } = useParams();
+  const [status, setstatus] = useState(null);
+
+  useEffect(() => {
+    const activateUser = async () => {
+      try {
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/users/validate/${registrationCode}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+
+        if (response.ok) {
+          setstatus("ok");
+        } else {
+          const error = await response.json();
+          setstatus("error");
+          console.error("Error al activar usuario:", error.message);
+        }
+      } catch (error) {
+        setstatus("error");
+      }
+    };
+
+    activateUser();
+  }, [registrationCode]);
+
+  return (
+    <div>
+      {status === "ok" && <p>¡Usuario activado correctamente!</p>}
+      {status === "error" && <p>Error al activar el usuario</p>}
+    </div>
+  );
+};
+
+export default ActivateUser;

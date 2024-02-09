@@ -30,6 +30,7 @@ const userBackgroundImgController = async (req, res, next) => {
     res.send({
       status: "ok",
       message: "Usuario actualizado / Updated user",
+      newURL: backgroundImgName,
     });
   } catch (err) {
     next(err);

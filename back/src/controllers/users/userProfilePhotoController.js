@@ -30,6 +30,7 @@ const userProfilePhotoController = async (req, res, next) => {
     res.send({
       status: "ok",
       message: "Usuario actualizado / Updated user",
+      newURL: profilePhotoFileName,
     });
   } catch (err) {
     next(err);
