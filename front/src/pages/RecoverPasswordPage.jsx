@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import recoverPasswordService from "../service/recoverPasswordService";
+import styles from "./recoverPassword.module.css"
 
 export const RecoverPasswordPage = () => {
   const [email, setEmail] = useState("");
@@ -21,19 +22,20 @@ export const RecoverPasswordPage = () => {
   };
 
   return (
-    <div>
-      <h3>Recuperar contraseña</h3>
-      <form onSubmit={handleSubmit}>
-        <div>
+    <div className={styles.dadForms}>
+      <h3 className={styles.title}>Recover Password</h3>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <div className={styles.divInput}>
           <label>Email</label>
           <input
+            className={styles.inputEmail}
             type="email"
             name="email"
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <button>Enviar</button>
-        {error ? <p>{error}</p> : null}
+        <button className={styles.boton}>Send</button>
+        {error ? <p className={styles.error} >{error}</p> : null}
       </form>
     </div>
   );

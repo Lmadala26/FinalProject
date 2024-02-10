@@ -32,7 +32,7 @@ const FormRegister = () => {
   return (
     <form className={styles.formRegister} onSubmit={handleSubmit}>
       <div>
-        <label>Nombre de usuario</label>
+        <label>User Name</label>
         <input
           className={styles.username}
           type="text"
@@ -65,7 +65,7 @@ const FormRegister = () => {
         />
       </div>
       <div>
-        <label>Confirmar Password</label>
+        <label>Confirm Password</label>
         <input
           className={styles.confirmPassword}
           type="password"
@@ -82,13 +82,13 @@ const FormRegister = () => {
         <>
           <p>{rta.message}</p>
           <Link to={"/login"}>
-            <button>Login</button>
+            <button className={styles.buttonLogin}>Login</button>
           </Link>
         </>
       ) : (
         ""
       )}
-      {error ? <p>{error}</p> : ""}
+      {error ? <p  className={styles.error}>{error}</p> : ""}
     </form>
   );
 };

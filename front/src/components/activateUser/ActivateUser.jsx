@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import styles from './activateUser.module.css'
 
 const ActivateUser = () => {
   const { registrationCode } = useParams();
@@ -35,8 +36,8 @@ const ActivateUser = () => {
 
   return (
     <div>
-      {status === "ok" && <p>¡Usuario activado correctamente!</p>}
-      {status === "error" && <p>Error al activar el usuario</p>}
+      {status === "ok" && <p className= {styles.ok}>¡Usuario activado correctamente!</p>}
+      {status === "error" && <p className= {styles.error}>Error al activar el usuario</p>}
     </div>
   );
 };
