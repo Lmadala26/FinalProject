@@ -26,7 +26,7 @@ router.post(
   newCommentController
 );
 
-router.get("/comments", authUserOptionalController, listCommentsController);
+router.get("/comments", listCommentsController);
 
 router.get(
   "/comments/:commentsId",

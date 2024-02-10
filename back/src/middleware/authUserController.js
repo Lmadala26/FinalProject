@@ -1,10 +1,8 @@
 import jwt from "jsonwebtoken";
-
 import {
   notAuthenticatedError,
   invalidCredentialsError,
 } from "../services/errorService.js";
-
 import { SECRET } from "../../env.js";
 
 const authUserController = async (req, res, next) => {
