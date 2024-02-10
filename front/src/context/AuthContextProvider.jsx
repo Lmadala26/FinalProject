@@ -13,7 +13,7 @@ const AuthContextProvider = ({ children }) => {
   }, [token]);
 
   useEffect(() => {
-    const getDataUserLogged = async () => {
+    const UserLogged = async () => {
       try {
         const data = await loggedUserService({ token });
         setUser(data);
@@ -22,7 +22,7 @@ const AuthContextProvider = ({ children }) => {
       }
     };
 
-    getDataUserLogged();
+    UserLogged();
   }, [token]);
 
   const logout = () => {

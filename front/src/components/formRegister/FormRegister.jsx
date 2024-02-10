@@ -81,14 +81,11 @@ const FormRegister = () => {
       {rta.status == "ok" ? (
         <>
           <p>{rta.message}</p>
-          <Link to={"/login"}>
-            <button className={styles.buttonLogin}>Login</button>
-          </Link>
         </>
       ) : (
         ""
       )}
-      {error ? <p  className={styles.error}>{error}</p> : ""}
+      {error ? <p className={styles.error}>{error}</p> : ""}
     </form>
   );
 };
