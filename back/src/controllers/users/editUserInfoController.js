@@ -4,12 +4,11 @@ import editUserInfoSchema from "../../schemas/users/editUserInfoSchema.js";
 
 const editUserInfoController = async (req, res, next) => {
   try {
-    const { userId } = req.params;
     const { username, email } = req.body;
 
     await validateSchemaUtil(editUserInfoSchema, req.body);
 
-    await updateUserInfoModel(userId, username, email);
+    await updateUserInfoModel(req.user.id, username, email);
 
     res.send({
       status: "ok",

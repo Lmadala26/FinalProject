@@ -54,13 +54,13 @@ router.put(
   userBackgroundImgController
 );
 
-router.put("/users/:userId/role", authUserController, changeUserRoleController);
-
-router.put(
-  "/users/:userId",
+router.patch(
+  "/users/edit",
   authUserController,
   userExistsController,
   editUserInfoController
 );
+
+router.put("/users/:userId/role", authUserController, changeUserRoleController);
 
 export default router;
