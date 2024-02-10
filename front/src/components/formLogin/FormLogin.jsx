@@ -2,8 +2,7 @@ import { useContext, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContextProvider";
 import { loginUserService } from "../../service/loginUserService";
-
-import styles from './formLogin.module.css'
+import styles from "./formLogin.module.css";
 
 const FormLogin = () => {
   const [email, setEmail] = useState("");
@@ -21,6 +20,10 @@ const FormLogin = () => {
       const rta = await loginUserService({ email, passwd });
 
       setToken(rta);
+
+      localStorage.setItem("token", rta);
+
+      console.log("token", rta);
 
       navigate("/");
     } catch (error) {
@@ -48,12 +51,11 @@ const FormLogin = () => {
               name="password"
               onChange={(e) => setPasswd(e.target.value)}
             />
-            <Link to={"/user/recover-password"}>
+            <Link to={"/users/password/recover"}>
               <p className={styles.linkRecover}>Recupar contraseña</p>
             </Link>
           </div>
           <div>
-              
             <button className={styles.botonLogin}>Login</button>
           </div>
 

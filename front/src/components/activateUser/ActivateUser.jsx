@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ActivateUser = () => {
   const { registrationCode } = useParams();
   const [status, setstatus] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const activateUser = async () => {
@@ -20,6 +22,8 @@ const ActivateUser = () => {
 
         if (response.ok) {
           setstatus("ok");
+
+          navigate("/users/login");
         } else {
           const error = await response.json();
           setstatus("error");

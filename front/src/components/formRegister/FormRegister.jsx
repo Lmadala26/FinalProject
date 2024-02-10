@@ -81,9 +81,6 @@ const FormRegister = () => {
       {rta.status == "ok" ? (
         <>
           <p>{rta.message}</p>
-          <Link to={"/login"}>
-            <button>Login</button>
-          </Link>
         </>
       ) : (
         ""

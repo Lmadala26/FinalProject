@@ -13,19 +13,22 @@ const AuthContextProvider = ({ children }) => {
   }, [token]);
 
   useEffect(() => {
-    const getDataUserLogged = async () => {
+    const UserLogged = async () => {
       try {
-        const data = await loggedUserService({ token });
-        setUser(data);
+        if (token) {
+          const data = await loggedUserService({ token });
+          setUser(data);
+        }
       } catch (error) {
         logout();
       }
     };
 
-    getDataUserLogged();
+    UserLogged();
   }, [token]);
 
   const logout = () => {
+    localStorage.removeItem("token");
     setToken("");
     setUser(null);
   };
