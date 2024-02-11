@@ -1,0 +1,15 @@
+.Buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+button {
+    width: 7vw;
+    height: 3.5vh;
+    border-radius: 40px;
+    margin: 3%;
+    background: none;
+    color: #ffffff;
+}

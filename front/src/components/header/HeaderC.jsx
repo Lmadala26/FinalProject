@@ -1,7 +1,14 @@
 import styles from './header.module.css';
 import logo from '../../assets/logos/logoTellit.png'
+import {AuthUser} from './logged'
+import React, { useState, useEffect, useContext } from "react";
+import loggedUserService from "../../service/loggedUserService";
+import { AuthContext } from '../../context/AuthContextProvider';
+
 export function Header(){
+
     return(
+      
     <>
         <header className={styles.Header}>
 
@@ -31,8 +38,7 @@ export function Header(){
             </div>
 
             <div className={styles.header__right}>
-                <button>Sign up</button>
-                <button>Log in</button>
+              <AuthUser/>
             </div>
 
         </header>

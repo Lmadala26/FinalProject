@@ -109,17 +109,7 @@ header {}
 
 
 .header__right {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
 }
 
 
-.header__right>button {
-    width: 7vw;
-    height: 3.5vh;
-    border-radius: 40px;
-    margin: 3%;
-    background: none;
-    color: #ffffff;
-}
