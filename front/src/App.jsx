@@ -5,9 +5,9 @@ import { RegisterPage } from "./pages/RegisterPage";
 import { LoginPage } from "./pages/LoginPage";
 import { RecoverPasswordPage } from "./pages/RecoverPasswordPage";
 import { NewPasswordPage } from "./pages/NewPasswordPage";
-import { EditProfileUser } from "./pages/EditProfileUser";
-import { PostComment } from "./pages/PostComment";
 import { ProfileUserPage } from "./pages/ProfileUserPage";
+import { EditUserPage } from "./pages/EditUserPage";
+import { PostComment } from "./pages/PostComment";
 import { SingleCommentPage } from "./pages/SingleCommentPage";
 import { SupportPage } from "./pages/SupportPage";
 import { ErrorPage } from "./pages/ErrorPage";
@@ -32,9 +32,9 @@ export function App() {
             element={<RecoverPasswordPage />}
           />
           <Route path="/users/password" element={<NewPasswordPage />} />
-          <Route path="/edit-profile/:id" element={<EditProfileUser />} />
+          <Route path="/users" element={<ProfileUserPage />} />
+          <Route path="/users/edit" element={<EditUserPage />} />
           <Route path="/post-comment/:id" element={<PostComment />} />
-          <Route path="/profile-user/:id" element={<ProfileUserPage />} />
           <Route path="/single-comment/:id" element={<SingleCommentPage />} />
           <Route path="/support" element={<SupportPage />} />
           <Route path="*" element={<ErrorPage />} />

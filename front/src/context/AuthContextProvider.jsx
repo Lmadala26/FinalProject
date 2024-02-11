@@ -5,7 +5,6 @@ export const AuthContext = createContext();
 
 const AuthContextProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
-
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -22,7 +21,9 @@ const AuthContextProvider = ({ children }) => {
       }
     };
 
-    UserLogged();
+    if (token) {
+      UserLogged();
+    }
   }, [token]);
 
   const logout = () => {

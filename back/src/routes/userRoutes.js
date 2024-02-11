@@ -40,6 +40,13 @@ router.post("/users/password/recover", recoverPassController);
 
 router.put("/users/password", editUserPassController);
 
+router.patch(
+  "/users/edit",
+  authUserController,
+  userExistsController,
+  editUserInfoController
+);
+
 router.put(
   "/users/profilephoto",
   authUserController,
@@ -52,13 +59,6 @@ router.put(
   authUserController,
   userExistsController,
   userBackgroundImgController
-);
-
-router.patch(
-  "/users/edit",
-  authUserController,
-  userExistsController,
-  editUserInfoController
 );
 
 router.put("/users/:userId/role", authUserController, changeUserRoleController);
