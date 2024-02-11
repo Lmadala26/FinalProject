@@ -1,7 +1,9 @@
-const loggedUserService = async ({ token }) => {
-  const url = `${import.meta.env.VITE_API_URL}/users`;
+const newCommentService = async ({ data, token }) => {
+  const url = `${import.meta.env.VITE_API_URL}/comments`;
 
   const response = await fetch(url, {
+    method: "POST",
+    body: data,
     headers: {
       authorization: `Bearer ${token}`,
     },
@@ -11,7 +13,7 @@ const loggedUserService = async ({ token }) => {
 
   if (!response.ok) throw new Error(json.message);
 
-  return json.data.user;
+  return json.data;
 };
 
-export default loggedUserService;
+export default newCommentService;

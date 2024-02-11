@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import styles from './activateUser.module.css'
+import { useNavigate } from "react-router-dom";
+import styles from "./activateUser.module.css";
 
 const ActivateUser = () => {
   const { registrationCode } = useParams();
   const [status, setstatus] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const activateUser = async () => {
@@ -21,6 +23,7 @@ const ActivateUser = () => {
 
         if (response.ok) {
           setstatus("ok");
+          navigate("/users/login");
         } else {
           const error = await response.json();
           setstatus("error");
@@ -36,8 +39,12 @@ const ActivateUser = () => {
 
   return (
     <div>
-      {status === "ok" && <p className= {styles.ok}>¡Usuario activado correctamente!</p>}
-      {status === "error" && <p className= {styles.error}>Error al activar el usuario</p>}
+      {status === "ok" && (
+        <p className={styles.ok}>¡Usuario activado correctamente!</p>
+      )}
+      {status === "error" && (
+        <p className={styles.error}>Error al activar el usuario</p>
+      )}
     </div>
   );
 };
