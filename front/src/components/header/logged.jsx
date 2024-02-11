@@ -11,20 +11,20 @@ export const AuthUser = () => {
     const {user, logout} = useContext(AuthContext);
 
     const { VITE_API_URL } = import.meta.env;
-     const [userData, setUserData] = useState(null);
+//      const [userData, setUserData] = useState(null);
 
-  useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const data = await loggedUserService({ token });
-        setUserData(data);
-      } catch (error) {
-        console.error(error.message);
-      }
-    };
+//   useEffect(() => {
+//     const fetchUserData = async () => {
+//       try {
+//         const data = await loggedUserService({ token });
+//         setUserData(data);
+//       } catch (error) {
+//         console.error(error.message);
+//       }
+//     };
 
-    fetchUserData();
-  }, [token]);
+//     fetchUserData();
+//   }, [token]);
     return (
         <div>
             {
