@@ -1,5 +1,5 @@
 const getCommentsByIdService = async (commentsId) => {
-  const url = `${import.meta.env.VITE_API_URL}/entries/${commentsId}`;
+  const url = `${import.meta.env.VITE_API_URL}/comments/${commentsId}`;
 
   const response = await fetch(url);
 

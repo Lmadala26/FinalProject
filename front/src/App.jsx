@@ -34,8 +34,8 @@ export function App() {
           <Route path="/users/password" element={<NewPasswordPage />} />
           <Route path="/users" element={<ProfileUserPage />} />
           <Route path="/users/edit" element={<EditUserPage />} />
-          <Route path="/post-comment/:id" element={<PostComment />} />
-          <Route path="/single-comment/:id" element={<SingleCommentPage />} />
+          <Route path="/comment" element={<PostComment />} />
+          <Route path="/comment/:id" element={<SingleCommentPage />} />
           <Route path="/support" element={<SupportPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
