@@ -9,6 +9,7 @@ const selectAllCommentsModel = async (keyword = "", userId = "") => {
                     C.id,
                     C.title,
                     C.topic, 
+                    C.description,
                     C.userId = ? AS owner,
                     C.createdAt
                 FROM comments C
