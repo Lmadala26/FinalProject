@@ -9,7 +9,7 @@ const useComments = () => {
   useEffect(() => {
     const getAllComments = async () => {
       const data = await fetchApi(`${VITE_API_URL}/comments`);
-      setEntries(data.data);
+      setComments(data.data);
     };
 
     getAllComments();

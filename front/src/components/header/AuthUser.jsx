@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContextProvider";
 import loggedUserService from "../../service/loggedUserService";
 import styles from "./logged.module.css";
-import userIcon from "../../assets/userIcon.jpg";
+import ejFotoPerfil from "../../assets/ejFotoPerfil.png";
 
 export const AuthUser = () => {
   const { token } = useContext(AuthContext);
@@ -34,8 +34,10 @@ export const AuthUser = () => {
             <img
               src={
                 user.profilePhoto
-                  ? `${VITE_API_URL}/uploads/${user.profilePhoto}`
-                  : userIcon
+                  ? `${import.meta.env.VITE_API_URL}/uploads/${
+                      user.profilePhoto
+                    }`
+                  : ejFotoPerfil
               }
               alt="imagen"
               width={"50px"}

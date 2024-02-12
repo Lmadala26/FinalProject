@@ -10,7 +10,7 @@ import { UPLOADS_DIR } from "../../env.js";
 
 export const savePhotoService = async (img, width) => {
   try {
-    const uploadsDir = path.join(process.cwd(), "..", "..", UPLOADS_DIR);
+    const uploadsDir = path.join(process.cwd(), ".", UPLOADS_DIR);
     try {
       await fs.access(uploadsDir);
     } catch {
@@ -31,7 +31,7 @@ export const savePhotoService = async (img, width) => {
 
 export const deletePhotoService = async (imgName) => {
   try {
-    const imgPath = path.join(process.cwd(), "..", "..", UPLOADS_DIR, imgName);
+    const imgPath = path.join(process.cwd(), ".", UPLOADS_DIR, imgName);
     try {
       await fs.access(imgPath);
     } catch {

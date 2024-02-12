@@ -32,8 +32,9 @@ export function App() {
             element={<RecoverPasswordPage />}
           />
           <Route path="/users/password" element={<NewPasswordPage />} />
-          <Route path="/users" element={<ProfileUserPage />} />
-          <Route path="/users/edit" element={<EditUserPage />} />
+          <Route path="/users" element={<ProfileUserPage />}>
+            <Route path="/users/edit" element={<EditUserPage />} />
+          </Route>
           <Route path="/comment" element={<NewCommentPage />} />
           <Route path="/comment/:id" element={<SingleCommentPage />} />
           <Route path="/support" element={<SupportPage />} />

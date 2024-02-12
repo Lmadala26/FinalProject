@@ -32,11 +32,14 @@
 // };
 
 import { useEffect, useState, useContext } from "react";
+import { Link, Outlet } from "react-router-dom";
 import { AuthContext } from "../context/AuthContextProvider";
 import loggedUserService from "../service/loggedUserService";
+import FormEditProfilePhoto from "../components/formEditUser/FormEditProfilePhoto";
+import FormEditBackgroundImg from "../components/formEditUser/FormEditBackgroundImg";
 
 export const ProfileUserPage = () => {
-  const { user, token } = useContext(AuthContext);
+  const { token } = useContext(AuthContext);
   const [userData, setUserData] = useState(null);
 
   useEffect(() => {
@@ -56,8 +59,14 @@ export const ProfileUserPage = () => {
     <div>
       {userData ? (
         <div>
-          <h3>Perfil de usuario {userData.username}</h3>
-          <h4>Email: {userData.email}</h4>
+          <h3>{userData.username}</h3>
+          <h4>{userData.email}</h4>
+          <Link to={"/users/edit"}>
+            <p>Modificar</p>
+          </Link>
+          <Outlet />
+          <FormEditProfilePhoto />
+          <FormEditBackgroundImg />
         </div>
       ) : (
         <p>Cargando información del usuario...</p>
