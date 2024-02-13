@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../../context/AuthContextProvider";
 import loggedUserService from "../../service/loggedUserService";
-import modifyProfilePhotoService from "../../service/modifyBackgroundImgService";
+import modifyBackgroundImgService from "../../service/modifyBackgroundImgService";
 import ejFondoPerfil from "../../assets/ejFondoPerfil.png";
 
 const FormEditBackgroundImg = () => {
@@ -15,9 +15,19 @@ const FormEditBackgroundImg = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!backgroundImg) {
+      console.error(
+        "No ha seleccionado ninguna imagen / You have not selected an image"
+      );
+      return;
+    }
+
     const data = new FormData();
     data.append("backgroundImg", backgroundImg);
-    await modifyProfilePhotoService({ data, token });
+    await modifyBackgroundImgService({ data, token });
+
+    const updatedUserData = await loggedUserService({ token });
+    setUser(updatedUserData);
   };
 
   useEffect(() => {
