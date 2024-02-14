@@ -1,43 +1,16 @@
-import { Tells } from "../components/comments/Comments";
+// import { Tells } from "../components/comments/Comments";
 import styles from "./homepage.module.css";
 import { TopComments } from "../components/topComments/topComments";
 import { Topic } from "../components/topics/topic";
+import { GetComments } from "../components/getComments/GetComments";
+
 export const HomePage = () => {
   return (
     <>
       <main className={styles.BodyB}>
         <article className={styles.Comments__section}>
           {/* <Comments /> */}
-          <Tells
-            userName={"Disney"}
-            userComment={"Voy a comprar nintendo"}
-            commentDate={"02/05/2004"}
-            commentTitle={"Hoy se cena"}
-          />
-          <Tells
-            userName={"Disney"}
-            userComment={"Voy a comprar nintendo"}
-            commentDate={"02/05/2004"}
-            commentTitle={"Hoy se cena"}
-          />
-          <Tells
-            userName={"Disney"}
-            userComment={"Voy a comprar nintendo"}
-            commentDate={"02/05/2004"}
-            commentTitle={"Hoy se cena"}
-          />
-          <Tells
-            userName={"Disney"}
-            userComment={"Voy a comprar nintendo"}
-            commentDate={"02/05/2004"}
-            commentTitle={"Hoy se cena"}
-          />
-          <Tells
-            userName={"Disney"}
-            userComment={"Voy a comprar nintendo"}
-            commentDate={"02/05/2004"}
-            commentTitle={"Hoy se cena"}
-          />
+          <GetComments />
         </article>
         <article className={styles.Side}>
           <Topic />
