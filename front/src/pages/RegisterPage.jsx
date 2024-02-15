@@ -7,9 +7,8 @@ export const RegisterPage = () => {
       <div className={styles.singUpFather}>
         <section className={styles.singUpSection}>
           <h1 className={styles.singUp}> Sing Up</h1>
-          <div className={styles.inputs}>
+          <div className={styles.inputs}></div>
           <FormRegister />
-          </div>
         </section>
       </div>
     </>

@@ -13,3 +13,51 @@ button {
     background: none;
     color: #ffffff;
 }
+
+.headerLeft{
+    display: flex;
+    align-items: end;
+}
+/*//////////////////////////////*/
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+.email{
+    color: #fff;
+    text-shadow:
+    0 0 1px #fff,
+    0 0 2px #C689CD,
+    0 0 2px #C689CD,
+    0 0 2px #C689CD,
+    0 0 4px #C689CD,
+    0 0 4px #C689CD;
+    background-color: none;
+    backdrop-filter: blur(10px);
+    box-shadow: 400px;
+    border-radius: 7px;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.profilePhoto{
+    width: 100%;
+    height: 7vh;
+    border-radius: 40px;
+    padding-bottom: 0;
+}
+.plus{
+    width: 2vw;
+    height: 2.5vh;
+    border-radius: 60px;
+    background: none;
+    color: #ffffff;
+}

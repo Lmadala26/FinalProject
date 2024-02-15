@@ -22,6 +22,7 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContextProvider";
+import styles from './post.module.css';
 
 export const FormNewComment = () => {
   const { token } = useContext(AuthContext);
@@ -64,7 +65,7 @@ export const FormNewComment = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+      <div className={styles.title}>
         <label htmlFor="title">Titulo</label>
         <input type="text" name="title" id="title" />
       </div>
@@ -72,7 +73,7 @@ export const FormNewComment = () => {
         <label htmlFor="topic">Topico</label>
         <input type="text" name="topic" id="topic" />
       </div>
-      <div>
+      <div className={styles.comment}>
         <label htmlFor="description">Descripcion</label>
         <input type="text" name="description" id="description" />
       </div>

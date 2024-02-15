@@ -18,16 +18,11 @@
 
 .loginTitle{
     display: flex;
-    width: 35.375rem;
-    height: 8.625rem;
     flex-direction: column;
-    justify-content: center;
     position: absolute;
-  left: 19.0625rem;
-  
-  top: 1rem;
+    left: 19.0625rem;
+    top: 1rem;
     color: #fff;
-    text-align: center;
     font-family: 'Sportrop';
     font-size: 8rem;
     font-style: normal;

@@ -28,23 +28,29 @@ export const AuthUser = () => {
   return (
     <div>
       {user ? (
-        <div>
-          <span>{user.email}</span>
-          <Link to={"/users"}>
+        <div className={styles.headerLeft}>
+          <button onClick={logout}>Logout</button>
+          <div className={styles.box}>
+          <div className={styles.icons}>
+            <Link to ={"/comment"}><button className={styles.plus}>+</button></Link>
+            <Link to={"/users"}>
             <img
               src={
                 user.profilePhoto
-                  ? `${import.meta.env.VITE_API_URL}/uploads/${
-                      user.profilePhoto
-                    }`
-                  : ejFotoPerfil
+                ? `${import.meta.env.VITE_API_URL}/uploads/${
+                  user.profilePhoto
+                }`
+                : ejFotoPerfil
               }
               alt="imagen"
               width={"50px"}
               height={"50px"}
-            />
+              className={styles.profilePhoto}
+              />
           </Link>
-          <button onClick={logout}>Logout</button>
+          </div>
+              <span className={styles.email}>{user.email}</span>
+          </div>
         </div>
       ) : (
         <div className={styles.Buttons}>
