@@ -5,7 +5,8 @@ export const TweetList = ({ tweets}) => {
     <ul className="tweet-list">
 {tweets.map((tweet) => (
   <div key={tweet.id}>
-    <h2>{tweet.title}</h2>
+    <h3>{tweet.title}</h3>
+    <p>User:{tweet.id}</p>
     <p>Topic: {tweet.topic}</p>
     <p>Comentario: {tweet.description}</p>
     <p>Posted: {new Date(tweet.createdAt).toLocaleString()}</p>

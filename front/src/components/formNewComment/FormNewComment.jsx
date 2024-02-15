@@ -71,15 +71,22 @@ export const FormNewComment = () => {
         </div>
         <form onSubmit={handleSubmit} className={styles.form}>
           <div >
-            <label htmlFor="title">Titulo</label>
+            <label htmlFor="title">Título</label>
             <input type="text" name="title" id="title" className={styles.section}/>
           </div>
           <div>
-            <label htmlFor="topic">Topico</label>
-            <input type="text" name="topic" id="topic" className={styles.section}/>
+            <label htmlFor="topic">Tópico</label>
+            <select type="text" name="topic" id="topic" className={styles.section}>
+                <option value="" disabled>Select Topic</option>
+                <option className={styles.topic1} >DEPORTES</option>
+                <option className={styles.topic2} >MÚSICA</option>
+                <option className={styles.topic3} >TECNOLOGÍA</option>
+                <option className={styles.topic4} >ECONOMÍA</option>
+                <option className={styles.topic5} >VIAJES</option>
+            </select>
           </div>
           <div className={styles.comment}>
-            <label htmlFor="description">Descripcion</label>
+            <label htmlFor="description">Descripción</label>
             <textarea type="text" name="description" id="description" className={styles.description}/>
           </div>
           <input type="submit" value="Enviar" className={styles.enviar}/>

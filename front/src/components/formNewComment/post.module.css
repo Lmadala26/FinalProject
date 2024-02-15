@@ -34,23 +34,19 @@
 /*LABELS*/
 .section {
     display: flex;
-    width: 100%;
-    height: 3.8125rem;
-    padding: 1.75rem;
+    width: 40vw;
+    height: 30vh;
     justify-content: center;
     align-items: center;
     gap: 0.625rem;
-    border-radius: 0.625rem;
-    border: 1px solid #fff;
-    background: #0f0f21;
-    backdrop-filter: blur(10.949999809265137px);
-    color: #686565;
+    background-color: rgba(13, 13, 158, 0.281);
+    border-color: aliceblue;
+    border-radius: 20px;
+    color: rgb(182, 183, 184);
+    width: 20vw;
+    height: 5vh;
     text-align: center;
-    font-family: Poppins;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+
 }
 
 .description{
@@ -63,31 +59,41 @@
     gap: 0.625rem;
     border-radius: 0.625rem;
     border: 1px solid #fff;
-    background: #0f0f21;
+    background: rgba(13, 13, 158, 0.281);
     backdrop-filter: blur(10.949999809265137px);
-    color: #686565;
+    color: aliceblue;
 }
 
 .enviar{
-    width: 13.3125rem;
-    padding: 0.625rem;
-
-    gap: 0.625rem;
-    color: #FFF;
-    text-align: center;
-    font-family: 'Poppins-Regular';
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    border-radius: 0.625rem;
-    border: 1px solid #FFF;
-    background: #0F0F21;
-    backdrop-filter: blur(10.949999809265137px);
+    width: 10vw;
+    height: 4vh;
+    background-color: rgba(13, 13, 158, 0.281);
+    color: aliceblue;
+    border-radius: 30px;
 }
 
 .error{
     background-color: rgb(233, 153, 153);
     border-radius: 30px;
     color: rgb(23, 1, 223);
+}
+
+.topic1 {
+    color: #7AE3EF;
+}
+
+.topic2 {
+    color: #FF0099;
+}
+
+.topic3 {
+    color: #F9EE07;
+}
+
+.topic4 {
+    color: #8BEC14;
+}
+
+.topic5 {
+    color: #CD0636;
 }
