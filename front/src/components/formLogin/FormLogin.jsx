@@ -29,10 +29,11 @@ const FormLogin = () => {
 
   return (
     <>
-      <section className={styles.DadLogin}>
+    <section className={styles.box}>
+      <div className={styles.DadLogin}>
         <h2 className={styles.loginTitle}>Login</h2>
         <form className={styles.dadForm} onSubmit={handleSubmit}>
-          <div className={styles.inputs}>
+            <div className={styles.inputs}>
             <label htmlFor="">Email</label>
             <input
               className={styles.inputEmail}
@@ -57,7 +58,8 @@ const FormLogin = () => {
 
           {error ? <p className={styles.errorStyle}>{error}</p> : null}
         </form>
-      </section>
+      </div>
+    </section>
     </>
   );
 };

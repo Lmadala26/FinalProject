@@ -64,21 +64,28 @@ export const FormNewComment = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className={styles.title}>
-        <label htmlFor="title">Titulo</label>
-        <input type="text" name="title" id="title" />
+    <div className={styles.box}>
+      <div className={styles.container}>
+        <div className={styles.title}>
+          <h2>¡Cuéntanos algo!</h2>
+        </div>
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <div >
+            <label htmlFor="title">Titulo</label>
+            <input type="text" name="title" id="title" className={styles.section}/>
+          </div>
+          <div>
+            <label htmlFor="topic">Topico</label>
+            <input type="text" name="topic" id="topic" className={styles.section}/>
+          </div>
+          <div className={styles.comment}>
+            <label htmlFor="description">Descripcion</label>
+            <textarea type="text" name="description" id="description" className={styles.description}/>
+          </div>
+          <input type="submit" value="Enviar" className={styles.enviar}/>
+          {error && <p className={styles.error}>{error}</p>}
+        </form>
       </div>
-      <div>
-        <label htmlFor="topic">Topico</label>
-        <input type="text" name="topic" id="topic" />
-      </div>
-      <div className={styles.comment}>
-        <label htmlFor="description">Descripcion</label>
-        <input type="text" name="description" id="description" />
-      </div>
-      <input type="submit" value="Enviar" />
-      {error && <p>{error}</p>}
-    </form>
+    </div>
   );
 };

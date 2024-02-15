@@ -1,58 +1,63 @@
+/*AJUSTES GENERALES//////////////////////////////////////////////////////////////////////*/
+
+.box{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 87vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botonLogin {
+    display: flex;
+    width: 13.3125rem;
+    padding: 0.625rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Poppins-Regular';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 0.625rem;
+    border: 1px solid #FFF;
+    background: #0F0F21;
+    backdrop-filter: blur(10.949999809265137px);
+}
+/*PADRES///////////////////////////////////////////////////////////////////////*/
 .DadLogin{
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.625rem;
-    width: 60%;
-    height: 51rem;
-    position: absolute;
+    gap: 30px;
+    width: 45vw;
+    height: 60vh;
     top: 12%;
     left: 50%;
-    transform: translateX(-50%);
     border-radius: 0.625rem;
     border: 1px solid #fff;
     background: rgba(15, 15, 33, 0.8);
     backdrop-filter: blur(2px);
 }
 
-.loginTitle{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 19.0625rem;
-    top: 1rem;
-    color: #fff;
-    font-family: 'Sportrop';
-    font-size: 8rem;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    text-decoration-line: underline;
-}
-
 .dadForm{
     display: flex;
-
-
-    width: 29.5rem;
     flex-direction: column;
     align-items: center;
-    gap: 3.4375rem;
-    position: absolute;
-    left: 22rem;
-    bottom: 3.6875rem;
+    gap: 10px;
 }
 
+/*INPUTS//////////////////////////////////////////////////////////////////////*/
 .inputs{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: absolute;
-    top: -25rem;
-    gap: 0.6rem;
+    gap:20px;
 }
-
 .inputEmail{
     display: flex;
     width: 100%;
@@ -73,7 +78,6 @@
     font-weight: 400;
     line-height: normal;
 }
-
 .inputPassword{
     display: flex;
     width: 100%;
@@ -95,38 +99,33 @@
     line-height: normal;
 }
 
-.botonLogin{
+.loginTitle{
     display: flex;
-    width: 13.3125rem;
-    padding: 0.625rem;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 0.625rem;
-    color: #FFF;
-    text-align: center;
-    font-family: 'Poppins-Regular';
-    font-size: 1.5rem;
+    left: 19.0625rem;
+    color: #fff;
+    font-family: 'Sportrop';
+    font-size: 500%;
     font-style: normal;
-    font-weight: 600;
+    font-weight: normal;
     line-height: normal;
-    border-radius: 0.625rem;
-    border: 1px solid #FFF;
-    background: #0F0F21;
-    backdrop-filter: blur(10.949999809265137px);
+    text-decoration-line: underline;
 }
+
+/*FOOTER//////////////////////////////////////////////////////////////////////*/
+
 
 .linkRecover {
     color: #FFF;
-text-align: center;
-font-family: 'Poppins-Regular';
-
-font-size: 1.5rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-decoration-line: underline;
+    text-align: center;
+    font-family: 'Poppins-Regular';
+    font-size: 120%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
 }
-
 .errorStyle{
     flex: 1 0 0;
     color: #e42f2f;
@@ -140,14 +139,8 @@ text-decoration-line: underline;
     bottom: 210%;
 }
 
-label {
-    flex: 1 0 0;
-    color: #686565;
-    text-align: center;
-    font-family: 'Poppins-Regular';
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  
+
+
+
+
+
