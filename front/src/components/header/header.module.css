@@ -24,13 +24,19 @@
     align-items: center;
 }
 
-.logo {
+.header__left>img {
     /* border: 1px solid red; */
-    width: 12vw;
-    height: 5vh;
+    width: 13vw;
+    height: 8vh;
     padding: 5px;
     border-radius: 40px;
     margin: 7%;
+}
+
+
+.logo {
+    width: 100%;
+object-fit:contain;
 }
 
 .header__center {

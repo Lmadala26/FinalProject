@@ -12,7 +12,7 @@ export function Header() {
     <>
       <header className={styles.Header}>
         <div className={styles.header__left}>
-          <Link to ={"/"} ><img  src={logo} alt="" className={styles.logo}/></Link>
+          <Link to ={"/"} className={styles.header__left} ><img  src={logo} alt="" className={styles.logo}/></Link>
         </div>
 
         <div className={styles.header__center}>
