@@ -3,6 +3,9 @@ import { AuthContext } from "../../context/AuthContextProvider";
 import loggedUserService from "../../service/loggedUserService";
 import modifyBackgroundImgService from "../../service/modifyBackgroundImgService";
 import ejFondoPerfil from "../../assets/ejFondoPerfil.png";
+import Form from "./Form";
+import Button from "./Button";
+import styles from "./FormEditBackgroundImg.module.css"
 
 const FormEditBackgroundImg = () => {
   const { token } = useContext(AuthContext);
@@ -43,10 +46,16 @@ const FormEditBackgroundImg = () => {
     fetchUserData();
   }, [token]);
 
+  const [mostrarFormulario, setMostrarFormulario] = useState(false);
+
+  const toggleFormulario = () => {
+    setMostrarFormulario(!mostrarFormulario);
+  }
+
   return (
     <div>
       {user ? (
-        <div>
+        <div className={styles.container}>
           <img
             src={
               user.backgroundImg
@@ -56,16 +65,11 @@ const FormEditBackgroundImg = () => {
                 : ejFondoPerfil
             }
             alt="imagen"
-            width={"50px"}
-            height={"50px"}
+            className={styles.backimg}
           />
           <br />
-          <form onSubmit={handleSubmit}>
-            <div>
-              <input type="file" name="backgroundImg" onChange={handleChange} />
-            </div>
-            <input type="submit" value="Modificar Background" />
-          </form>
+          <Button onClick={toggleFormulario} />
+      {mostrarFormulario && <Form />}
         </div>
       ) : (
         <p>Cargando información del usuario...</p>

@@ -1,14 +1,12 @@
+import React from "react";
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../../context/AuthContextProvider";
 import loggedUserService from "../../service/loggedUserService";
 import modifyProfilePhotoService from "../../service/modifyProfilePhotoService";
 import ejFotoPerfil from "../../assets/ejFotoPerfil.png";
-import Button from "./buttonprof";
-import FormProf from "./formprof";
-import styles from "./profileuserimg.module.css"
 
-const FormEditProfilePhoto = () => {
-  const { token } = useContext(AuthContext);
+const FormProf = () =>{
+      const { token } = useContext(AuthContext);
   const [user, setUser] = useState(null);
   const [profilePhoto, setProfilePhoto] = useState(null);
 
@@ -46,34 +44,12 @@ const FormEditProfilePhoto = () => {
     fetchUserData();
   }, [token]);
 
-    const [mostrarFormulario, setMostrarFormulario] = useState(false);
+    return(
+        <form onSubmit={handleSubmit}>
+            <div><input type="file" name="profilePhoto" onChange={handleChange} /></div>
+            <input type="submit" value="Modificar Foto de Perfil" />
+        </form>
+    )
+}
 
-  const toggleFormulario = () => {
-    setMostrarFormulario(!mostrarFormulario);
-  }
-
-  return (
-    <div>
-      {user ? (
-        <div className={styles.container2}>
-          <img
-            src={
-              user.profilePhoto
-                ? `${import.meta.env.VITE_API_URL}/uploads/${user.profilePhoto}`
-                : ejFotoPerfil
-            }
-            alt="imagen"
-            className={styles.profileimg}
-          />
-          <br />
-          <Button onClick={toggleFormulario} />
-      {mostrarFormulario && <FormProf />}
-        </div>
-      ) : (
-        <p>Cargando información del usuario...</p>
-      )}
-    </div>
-  );
-};
-
-export default FormEditProfilePhoto;
+export default FormProf ;

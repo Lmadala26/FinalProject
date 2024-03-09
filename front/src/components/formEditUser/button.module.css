@@ -1,0 +1,6 @@
+.button{
+    background-color: beige;
+    color:blue;
+    position: absolute;
+    transform: translateX(-40%) translateY(-290%);
+}

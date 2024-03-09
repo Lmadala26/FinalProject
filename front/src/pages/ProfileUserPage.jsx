@@ -37,7 +37,7 @@ import { AuthContext } from "../context/AuthContextProvider";
 import loggedUserService from "../service/loggedUserService";
 import FormEditProfilePhoto from "../components/formEditUser/FormEditProfilePhoto";
 import FormEditBackgroundImg from "../components/formEditUser/FormEditBackgroundImg";
-
+import styles from "./profilepage.module.css"
 export const ProfileUserPage = () => {
   const { token } = useContext(AuthContext);
   const [userData, setUserData] = useState(null);
@@ -56,17 +56,19 @@ export const ProfileUserPage = () => {
   }, [token]);
 
   return (
-    <div>
+    <div className={styles.container}>
       {userData ? (
-        <div>
-          <h3>{userData.username}</h3>
-          <h4>{userData.email}</h4>
-          <Link to={"/users/edit"}>
-            <p>Modificar</p>
-          </Link>
-          <Outlet />
-          <FormEditProfilePhoto />
+        <div className={styles.section1}>
           <FormEditBackgroundImg />
+          <FormEditProfilePhoto />
+          <div className={styles.datos}>
+            <h3>{userData.username}</h3>
+            <h4>{userData.email}</h4>
+            <Outlet />
+            <Link to={"/users/edit"}>
+              <p>Modificar</p>
+            </Link>
+          </div>
         </div>
       ) : (
         <p>Cargando información del usuario...</p>
