@@ -60,15 +60,20 @@ export const ProfileUserPage = () => {
       {userData ? (
         <div className={styles.section1}>
           <FormEditBackgroundImg />
-          <FormEditProfilePhoto />
-          <div className={styles.datos}>
-            <h3>{userData.username}</h3>
-            <h4>{userData.email}</h4>
+          <div className={styles.prof}>
+            <FormEditProfilePhoto />
+            <div className={styles.datos}>
+            <h3 className={styles.hs}>{userData.username}</h3>
+            <h4 className={styles.hs}>{userData.email}</h4>
             <Outlet />
-            <Link to={"/users/edit"}>
-              <p>Modificar</p>
+            <Link to={"/users/edit"} >
+              <button className={styles.mod}>Settings</button>
             </Link>
+            </div>
           </div>
+          <Link to={"/comment"} className={styles.create}>
+            <button> Tell it to the world!</button>
+          </Link>
         </div>
       ) : (
         <p>Cargando información del usuario...</p>

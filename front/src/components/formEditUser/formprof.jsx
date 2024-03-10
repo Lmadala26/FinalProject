@@ -4,6 +4,8 @@ import { AuthContext } from "../../context/AuthContextProvider";
 import loggedUserService from "../../service/loggedUserService";
 import modifyProfilePhotoService from "../../service/modifyProfilePhotoService";
 import ejFotoPerfil from "../../assets/ejFotoPerfil.png";
+import styles from "./formcss.module.css"
+
 
 const FormProf = () =>{
       const { token } = useContext(AuthContext);
@@ -45,7 +47,7 @@ const FormProf = () =>{
   }, [token]);
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={styles.but}>
             <div><input type="file" name="profilePhoto" onChange={handleChange} /></div>
             <input type="submit" value="Modificar Foto de Perfil" />
         </form>

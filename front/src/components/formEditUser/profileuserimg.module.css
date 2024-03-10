@@ -1,12 +1,17 @@
 .container2{
-    width: 15vw;
-    height: 15vh;
-    position: absolute;
-    transform: translateX(41.5vw) translateY(-20vh);
+    width: 11vw;
+    height: 13vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profileimg{
-    width: 100%;
+    width: 70%;
     height: 100%;
     border-radius: 100%;
+}
+
+.but{
+    transform: translateY(200%);
 }

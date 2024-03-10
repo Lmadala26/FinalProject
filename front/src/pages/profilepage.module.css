@@ -1,25 +1,86 @@
 
 .container{
-    background-color: rgb(169, 209, 209);
     width: 100vw;
     height: 89.5vh;
-    transform: translateY(0.1%);
 }
 
 .section1{
     width: 100%;
     height: 30%;
 }
-.datos{
-    background-color: bisque;
+.prof{
+    /* background-color: bisque; */
     border-radius: 20px;
     padding: 7px;
     width: fit-content;
     height: fit-content;
-    transform: translateX(45.3vw) translateY(-4vh);
+    transform: translateX(43vw) translateY(-27vh);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap:5px;
+}
+
+.datos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background-color: rgba(15, 15, 33, 0.80);
+    backdrop-filter: blur(5px);
+    padding: 7px;
+    border-radius: 25px;
+}
+
+.mod{
+    /* background-color: beige; */
+    /* padding: 4px; */
+    border-radius: 10px;
+    background: rgba(15, 15, 33, 0.80);
+    color: #ffffff;
+    backdrop-filter: blur(5px)
+}
+
+.hs{
+    color: #fff;
+    text-shadow:
+        0 0 1px #fff,
+        0 0 2px #C689CD,
+        0 0 2px #C689CD,
+        0 0 2px #C689CD,
+        0 0 4px #C689CD,
+        0 0 4px #C689CD;
+    background-color: none;
+    box-shadow: 400px;
+    border-radius: 7px;
+}
+.create{
+    /* background-color: #0044ff; */
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* transform: translateX(30vw) translateY(-10vh); */
+}
+.create>button{
+    width: 40vw;
+    height: 14vh;
+    transform: translateX(30vw) translateY(-10vh);
+    background-color: aqua;
+    font-size: 4em;
+    backdrop-filter: blur(1rem);
+    border-radius: 30px;
+    border: double 4px transparent;
+    background-image: linear-gradient(#212121, #212121), linear-gradient(137.48deg, #422cc4 10%, #FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    cursor: pointer;
+}
+
+.create:onclick{
+    transform: scale(1.03);
 }

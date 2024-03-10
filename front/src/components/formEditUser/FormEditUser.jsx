@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContextProvider";
 import modifyUserService from "../../service/modifyUserService";
 import loggedUserService from "../../service/loggedUserService";
+import styles from "./edituser.module.css"
 
 const FormUserEdit = () => {
   // const { user, token } = useContext(AuthContext);
@@ -46,7 +47,7 @@ const FormUserEdit = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <form onSubmit={handleFormData}>
         <div>
           <label htmlFor="">Nombre de usuario</label>
@@ -66,7 +67,7 @@ const FormUserEdit = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <button>Modificar</button>
+        <button>Change</button>
         {error ? <p>{error}</p> : null}
       </form>
     </div>
