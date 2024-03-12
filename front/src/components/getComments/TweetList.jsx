@@ -19,10 +19,7 @@ export const TweetList = ({ tweets }) => {
                     }`
                   : ejFotoPerfil
               }
-              alt="imagen"
-              width={"50px"}
-              height={"50px"}
-              className={styles.profilePhoto}
+              className={styles.user__img}
             />
           </div>
 
@@ -32,7 +29,9 @@ export const TweetList = ({ tweets }) => {
             <div className={styles.c__head}>
               <div className={styles.user__name}>
                 {" "}
-                <p>Usurio: {tweet.username}</p>
+                <p style={{ textDecoration: "underline" }}>
+                  Usurio: {tweet.username}
+                </p>
               </div>
               <div className={styles.c__date}>
                 {new Date(tweet.createdAt).toLocaleString()}
@@ -40,8 +39,8 @@ export const TweetList = ({ tweets }) => {
             </div>
 
             <div className={styles.c__center}>
-              <p>Comentario: {tweet.description}</p>
               <p>Topic: {tweet.topic}</p>
+              <p>Comentario: {tweet.description}</p>
               <div className={styles.c__photo}>
                 <img src="" alt="" />
               </div>
