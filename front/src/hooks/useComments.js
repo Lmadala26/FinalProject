@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import {getUserTweetsService } from "../service/getUserTweetsService";
-import { getAllTweetsService} from "../service/getAllComments";
+import {getUserCommentsService } from "../service/getUserCommentsService";
+import { getAllCommentsService} from "../service/getAllComments";
 
 const useTweets = (id) => {
   const [tweets, setTweets] = useState([]);
@@ -12,8 +12,8 @@ const useTweets = (id) => {
       try {
         setLoading(true);
         const data = id
-          ? await getUserTweetsService(id)
-          : await getAllTweetsService();
+          ? await getUserCommentsService(id)
+          : await getAllCommentsService();
 
         setTweets(data);
       } catch (error) {

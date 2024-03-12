@@ -5,7 +5,7 @@ import modifyBackgroundImgService from "../../service/modifyBackgroundImgService
 import ejFondoPerfil from "../../assets/ejFondoPerfil.png";
 import Form from "./Form";
 import Button from "./Button";
-import styles from "./FormEditBackgroundImg.module.css"
+import styles from "./formEditBackgroundImg.module.css"
 
 const FormEditBackgroundImg = () => {
   const { token } = useContext(AuthContext);

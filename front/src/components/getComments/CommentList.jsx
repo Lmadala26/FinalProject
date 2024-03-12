@@ -1,10 +1,10 @@
-import { Tweet } from "./Tweet";
-import styles from "./tweetList.module.css";
+// import { Tweet } from "./Tweet";
+import styles from "./commentList.module.css";
 import ejFotoPerfil from "../../assets/ejFotoPerfil.png";
 import positiveVote from "../../assets/icons/positiveVote.svg";
 import negativeVote from "../../assets/icons/negativeVote.svg";
 
-export const TweetList = ({ tweets }) => {
+export const CommentList = ({ tweets }) => {
   return tweets.length ? (
     <ul className="tweet-list">
       {tweets.map((tweet) => (

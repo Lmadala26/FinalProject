@@ -1,4 +1,4 @@
-export const getUserTweetsService = async (id) => {
+export const getUserCommentsService = async (id) => {
   const response = await fetch(
     `${process.env.REACT_APP_BACKEND}/comments/${id}`
   );

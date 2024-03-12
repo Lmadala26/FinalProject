@@ -1,4 +1,4 @@
-export const getAllTweetsService = async () => {
+export const getAllCommentsService = async () => {
 const response = await fetch(`http://localhost:3000/comments`, {
   headers: {
     'Cache-Control': 'no-cache'

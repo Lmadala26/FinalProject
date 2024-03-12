@@ -1,5 +1,5 @@
-import useTweets from "../../hooks/useTweets";
-import { TweetList } from "../../components/getComments/TweetList";
+import useTweets from "../../hooks/useComments";
+import { CommentList } from "./CommentList";
 // import { ErrorMessage } from "../components/ErrorMessage";
 import { Loading } from "../../components/getComments/Loading";
 
@@ -11,6 +11,6 @@ export const GetComments = () => {
 
   
     return (
-        <TweetList tweets={tweets} removeTweet={removeTweet} />
+        <CommentList tweets={tweets} removeTweet={removeTweet} />
     );
   };
